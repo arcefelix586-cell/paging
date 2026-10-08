@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AGRO AVES | Producción Avícola</title>
+
+    <meta name="description"
+        content="AGRO AVES - Aves para producción avícola. Codornices, gallinas Brahma, pollitos y más.">
+
+    <style>
+
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background: #f4f7f3;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+           BARRA SUPERIOR
+        ========================== */
+
+        .barra-superior {
+            background: #123d20;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.10);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 75px;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            color: #176b35;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #e5a900;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .menu a {
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background: #176b35;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           PORTADA
+        ========================== */
+
+        .hero {
+            min-height: 570px;
+            padding: 70px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    rgba(0, 45, 20, 0.68),
+                    rgba(0, 45, 20, 0.58)
+                ),
+                url("images (2).jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: white;
+            text-align: center;
+        }
+
+        .hero-contenido {
+            max-width: 850px;
+            animation: aparecer 1s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 85px);
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.45);
+        }
+
+        .hero h1 span {
+            color: #ffd21c;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 20px;
+            opacity: 0.95;
+        }
+
+        .botones-hero {
+            margin-top: 30px;
+
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-principal {
+            background: #f4bd00;
+            color: #17230f;
+        }
+
+        .btn-principal:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-secundario {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-secundario:hover {
+            background: white;
+            color: #176b35;
+        }
+
+
+        /* =========================
+           SECCIONES
+        ========================== */
+
+        section {
+            padding: 75px 20px;
+        }
+
+        .contenedor {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .titulo-seccion h2 {
+            font-size: 38px;
+            color: #145c2d;
+            margin-bottom: 10px;
+        }
+
+        .titulo-seccion p {
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .linea {
+            width: 70px;
+            height: 5px;
+            background: #f2b900;
+            border-radius: 10px;
+            margin: 15px auto;
+        }
+
+
+        /* =========================
+           PRODUCTO PRINCIPAL
+        ========================== */
+
+        .producto-principal {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.09);
+        }
+
+        .producto-imagen {
+            overflow: hidden;
+            border-radius: 20px;
+            background: #eee;
+        }
+
+        .producto-imagen img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .producto-imagen:hover img {
+            transform: scale(1.05);
+        }
+
+        .etiqueta {
+            display: inline-block;
+            background: #e9f7ed;
+            color: #176b35;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .producto-info h2 {
+            font-size: 34px;
+            color: #185d30;
+            margin-bottom: 15px;
+        }
+
+        .producto-info p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .estrellas {
+            color: #f4b900;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .precio-anterior {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 18px;
+        }
+
+        .precio {
+            color: #176b35;
+            font-size: 42px;
+            font-weight: 900;
+            margin: 5px 0;
+        }
+
+        .ahorro {
+            display: inline-block;
+            color: #168044;
+            background: #e7f8ec;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            margin-top: 25px;
+            background: #25d366;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(37, 211, 102, 0.3);
+        }
+
+
+        /* =========================
+           TARJETAS
+        ========================== */
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.35s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.14);
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .tarjeta-contenido {
+            padding: 22px;
+        }
+
+        .tarjeta h3 {
+            color: #185d30;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .tarjeta p {
+            color: #666;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           BRAHMA
+        ========================== */
+
+        .brahma {
+            background: #edf5ee;
+        }
+
+        .brahma-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .brahma-card img {
+            width: 100%;
+            height: 370px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .brahma-info h2 {
+            color: #185d30;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .brahma-info p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           OFERTA
+        ========================== */
+
+        .oferta {
+            background: linear-gradient(135deg, #145c2d, #0b391c);
+            color: white;
+            border-radius: 25px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        .oferta img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .oferta-contenido {
+            padding: 40px;
+        }
+
+        .oferta h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .oferta p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+
+        /* =========================
+           CONTACTO
+        ========================== */
+
+        .contacto {
+            background: white;
+        }
+
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .contacto-card {
+            padding: 30px;
+            text-align: center;
+            background: #f6f9f6;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .contacto-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icono {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contacto-card h3 {
+            color: #176b35;
+            margin-bottom: 8px;
+        }
+
+        .contacto-card p {
+            color: #666;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #102c19;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo span {
+            color: #f4bd00;
+        }
+
+        footer p {
+            color: #c8d5cb;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           BOTÓN WHATSAPP FLOTANTE
+        ========================== */
+
+        .whatsapp-flotante {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #25d366;
+            color: white;
+
+            border-radius: 50%;
+            font-size: 29px;
+
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+            z-index: 2000;
+            transition: 0.3s;
+        }
+
+        .whatsapp-flotante:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* =========================
+           ANIMACIÓN
+        ========================== */
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .producto-principal,
+            .brahma-card,
+            .oferta {
+                grid-template-columns: 1fr;
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contacto-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+                min-height: 520px;
+                background-attachment: scroll;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .menu {
+                gap: 3px;
+            }
+
+            .menu a {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+
+            .producto-principal {
+                padding: 18px;
+            }
+
+            .producto-imagen img {
+                height: 280px;
+            }
+
+            .producto-info h2 {
+                font-size: 28px;
+            }
+
+            .precio {
+                font-size: 34px;
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+
+            .brahma-card {
+                padding: 18px;
+            }
+
+            .brahma-card img {
+                height: 280px;
+            }
+
+            .oferta-contenido {
+                padding: 25px;
+            }
+
+            .oferta h2 {
+                font-size: 30px;
+            }
+
+            .whatsapp-flotante {
+                width: 55px;
+                height: 55px;
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         BARRA SUPERIOR
+    ========================== -->
+
+    <div class="barra-superior">
+        🔥 EL ALIADO #1 PARA NEGOCIOS AVÍCOLAS 🔥
+    </div>
+
+
+    <!-- =========================
+         MENÚ
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="#inicio" class="logo">
+                🐦 AGRO <span>AVES</span>
+            </a>
+
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#aves">Aves</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         PORTADA
+    ========================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-contenido">
+
+            <h1>
+                AGRO <span>AVES</span>
+            </h1>
+
+            <p>
+                Soluciones avícolas para productores y emprendedores.
+                Encuentra aves para producción y crianza con atención
+                personalizada.
+            </p>
+
+            <div class="botones-hero">
+
+                <a href="#productos" class="btn btn-principal">
+                    🐔 Ver productos
+                </a>
+
+                <a href="#contacto" class="btn btn-secundario">
+                    📞 Contáctanos
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTO PRINCIPAL
+    ========================== -->
+
+    <section id="productos">
+
+        <div class="contenedor">
+
+            <div class="titulo-seccion">
+
+                <h2>Producto destacado</h2>
+
+                <div class="linea"></div>
+
+                <p>
+                    Conoce una de nuestras principales opciones
+                    para producción avícola.
+                </p>
+
+            </div>
+
+
+            <div class="producto-principal">
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="codorniz (1).jpg"
+                        alt="Codorniz ponedora de 30 días">
+
+                </div>
+
+
+                <div class="producto-info">
+
+                    <span class="etiqueta">
+                        ⭐ PRODUCTO DESTACADO
+                    </span>
+
+                    <h2>
+                        Codorniz Ponedora de 30 días
+                    </h2>
+
+                    <div class="estrellas">
+                        ★★★★★
+                        <span style="color:#666;">
+                            4.8/5 | +8.831 reseñas
+                        </span>
+                    </div>
+
+                    <p>
+                        Codornices ideales para proyectos de producción
+                        avícola y emprendimientos relacionados con la
+                        crianza de aves.
+                    </p>
+
+                    <div class="precio-anterior">
+                        Antes: Bs 50,00
+                    </div>
+
+                    <div class="precio">
+                        Bs 39,90
+                    </div>
+
+                    <span class="ahorro">
+                        💰 Ahorras Bs 10,10
+                    </span>
+
+                    <br>
+
+                    <a
+                        class="btn-whatsapp"
+                        href="https://wa.me/59172666428"
+                        target="_blank">
+
+                        💬 Consultar por WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TIPOS DE AVES
+    ========================== -->
+
+    <section id="aves">
+
+        <div class="contenedor">
+
+            <div class="titulo-seccion">
+
+                <h2>Nuestras aves</h2>
+
+                <div class="linea"></div>
+
+                <p>
+                    Conoce algunas de las aves disponibles
+                    en AGRO AVES.
+                </p>
+
+            </div>
+
+
+            <div class="tarjetas">
+
+
+                <div class="tarjeta">
+
+                    <img
+                        src="images.jpg"
+                        alt="Codornices">
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>🐦 Codornices</h3>
+
+                        <p>
+                            Aves de tamaño pequeño, ideales para
+                            proyectos de producción y crianza.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <img
+                        src="images (1).jpg"
+                        alt="Gallinas">
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>🐔 Gallinas</h3>
+
+                        <p>
+                            Diferentes opciones de gallinas para
+                            producción y emprendimientos avícolas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <img
+                        src="image-99.jpg"
+                        alt="Pollitos">
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>🐤 Pollitos</h3>
+
+                        <p>
+                            Pollitos para quienes desean iniciar
+                            o ampliar su proyecto avícola.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLINA BRAHMA
+    ========================== -->
+
+    <section class="brahma">
+
+        <div class="contenedor">
+
+            <div class="titulo-seccion">
+
+                <h2>Gallinas Brahma</h2>
+
+                <div class="linea"></div>
+
+                <p>
+                    Una opción para productores que buscan
+                    ampliar su producción avícola.
+                </p>
+
+            </div>
+
+
+            <div class="brahma-card">
+
+                <img
+                    src="images (1).jpg"
+                    alt="Gallina Brahma">
+
+                <div class="brahma-info">
+
+                    <span class="etiqueta">
+                        🐔 DISPONIBLE
+                    </span>
+
+                    <h2>
+                        Gallina Brahma de 75 días
+                    </h2>
+
+                    <p>
+                        La gallina Brahma es una raza de gran tamaño
+                        que puede formar parte de proyectos de crianza
+                        y producción avícola.
+                    </p>
+
+                    <p>
+                        Ideal para productores y emprendedores que
+                        desean incorporar nuevas aves a su negocio.
+                    </p>
+
+                    <div class="precio-anterior">
+                        Antes: Bs 2.500,00
+                    </div>
+
+                    <div class="precio">
+                        Bs 1.999,90
+                    </div>
+
+                    <span class="ahorro">
+                        💰 Ahorras Bs 500,10
+                    </span>
+
+                    <br>
+
+                    <a
+                        class="btn-whatsapp"
+                        href="https://wa.me/59172666428"
+                        target="_blank">
+
+                        💬 Consultar disponibilidad
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         OFERTA
+    ========================== -->
+
+    <section id="ofertas">
+
+        <div class="contenedor">
+
+            <div class="oferta">
+
+                <img
+                    src="Agrotendenciatv-agropedia-codorniz-codornices-cria-36a-y-b.jpg.webp"
+                    alt="Producción de codornices">
+
+                <div class="oferta-contenido">
+
+                    <h2>
+                        🌱 Haz crecer tu proyecto avícola
+                    </h2>
+
+                    <p>
+                        Encuentra aves y opciones para comenzar
+                        o mejorar tu emprendimiento de producción.
+                    </p>
+
+                    <a
+                        href="https://wa.me/59172666428"
+                        target="_blank"
+                        class="btn btn-principal">
+
+                        Solicitar información
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
+    <section class="contacto" id="contacto">
+
+        <div class="contenedor">
+
+            <div class="titulo-seccion">
+
+                <h2>Contáctanos</h2>
+
+                <div class="linea"></div>
+
+                <p>
+                    Estamos disponibles para atender tus consultas.
+                </p>
+
+            </div>
+
+
+            <div class="contacto-grid">
+
+
+                <div class="contacto-card">
+
+                    <div class="icono">📍</div>
+
+                    <h3>Ubicación</h3>
+
+                    <p>
+                        San Julián, Santa Cruz, Bolivia
+                    </p>
+
+                    <br>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=San+Julian+Santa+Cruz+Bolivia"
+                        target="_blank"
+                        class="btn btn-principal">
+
+                        📍 Ver ubicación
+
+                    </a>
+
+                </div>
+
+
+                <div class="contacto-card">
+
+                    <div class="icono">📱</div>
+
+                    <h3>WhatsApp</h3>
+
+                    <p>
+                        Atención y consultas
+                    </p>
+
+                    <br>
+
+                    <a
+                        href="https://wa.me/59172666428"
+                        target="_blank"
+                        class="btn btn-principal">
+
+                        💬 Escribir ahora
+
+                    </a>
+
+                </div>
+
+
+                <div class="contacto-card">
+
+                    <div class="icono">📧</div>
+
+                    <h3>Correo</h3>
+
+                    <p>
+                        contacto@agroaves.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🐦 AGRO <span>AVES</span>
+        </div>
+
+        <p>
+            Aves para producción avícola
+        </p>
+
+        <p style="margin-top:10px;">
+            © 2026 AGRO AVES. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         WHATSAPP FLOTANTE
+    ========================== -->
+
+    <a
+        href="https://wa.me/59172666428"
+        target="_blank"
+        class="whatsapp-flotante"
+        aria-label="Contactar por WhatsApp">
+
+        💬
+
+    </a>
+
+</body>
+
+</html>
